@@ -1,4 +1,4 @@
-This is a project I'm undertaking to help me keep track of carbon emissions due to work-related flying. 
+Project objective: Help me keep track of carbon emissions due to work-related flying with the method from http://www.flightemissionmap.org/. 
 
 It includes: 
 1. Flight tracking data entry tool - view only link:
