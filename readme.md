@@ -15,3 +15,9 @@ https://docs.google.com/spreadsheets/d/10_DppOhXNVn38csZiNLH7TJhdyPmqpMO6u3d5zI7
 
 
 ![Screenshot](misc/publish_to_web_screenshot.png)
+
+References:
+For contextualizing tCO2
+1. Ivanova, Diana, et al. "Mapping the carbon footprint of EU regions." Environmental Research Letters 12.5 (2017): 054013.
+2. https://www.climate-transparency.org/g20-climate-performance/g20report2018
+3. https://calculator.carbonfootprint.com/ (2013 Honda Civic 4951 miles)
