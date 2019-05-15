@@ -8,7 +8,7 @@ https://docs.google.com/spreadsheets/d/10_DppOhXNVn38csZiNLH7TJhdyPmqpMO6u3d5zI7
    + I've choosen Google Sheets because it's free and has a mobile app for [iOS](https://itunes.apple.com/app/apple-store/id842849113?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets) devices (so you can enter data when you're out and about)
 
 
-2. Monthly or quartery visualizations of emissions
+2. Monthly or quarterly visualizations
 - the number of flights
 - the estimated amount of emissions
 - Car-travel equivalent 
@@ -17,7 +17,7 @@ https://docs.google.com/spreadsheets/d/10_DppOhXNVn38csZiNLH7TJhdyPmqpMO6u3d5zI7
 ![Screenshot](misc/publish_to_web_screenshot.png)
 
 References:
-For contextualizing tCO2
+For contextualizing tCO2 for quarterly visualizations
 1. [Ivanova, Diana, et al. "Mapping the carbon footprint of EU regions." Environmental Research Letters 12.5 (2017): 054013.](https://doi.org/10.1088/1748-9326/aa6da9)
 2. https://www.climate-transparency.org/g20-climate-performance/g20report2018
 3. https://calculator.carbonfootprint.com/ (2013 Honda Civic 4951 miles)
