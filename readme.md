@@ -10,8 +10,7 @@ https://docs.google.com/spreadsheets/d/10_DppOhXNVn38csZiNLH7TJhdyPmqpMO6u3d5zI7
 
 2. Monthly, quarterly, yearly visualizations
 - the number of flights
-- the estimated amount of emissions
-- Car-travel equivalent 
+- the estimated amount of emissions in tonne of CO2 equivalent emissions (tCO2e)
 
 
 ![Screenshot](misc/publish_to_web_screenshot.png)
