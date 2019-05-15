@@ -21,3 +21,4 @@ For contextualizing tCO2
 1. [Ivanova, Diana, et al. "Mapping the carbon footprint of EU regions." Environmental Research Letters 12.5 (2017): 054013.](https://doi.org/10.1088/1748-9326/aa6da9)
 2. https://www.climate-transparency.org/g20-climate-performance/g20report2018
 3. https://calculator.carbonfootprint.com/ (2013 Honda Civic 4951 miles)
+4. [Academic air travel has a limited influence on professional success](https://doi.org/10.1016/j.jclepro.2019.04.109) Looked at distribution of tCO2 in Figure 3 for creating categories
