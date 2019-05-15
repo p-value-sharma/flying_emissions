@@ -10,3 +10,6 @@ I've choosen Google Sheets because it's free and has a mobile app on [iOS](https
 - the number of flights
 - the estimated amount of emissions
 - Car-travel equivalent 
+
+
+![Screenshot](misc/publish_to_web_screenshot.png)
