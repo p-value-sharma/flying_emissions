@@ -11,6 +11,7 @@ https://docs.google.com/spreadsheets/d/10_DppOhXNVn38csZiNLH7TJhdyPmqpMO6u3d5zI7
 2. Monthly, quarterly, yearly visualizations
 - the number of flights
 - the estimated amount of emissions in tonne of CO2 equivalent emissions (tCO2e)
+  + for caveats of the method, please read the "How are emissions calculated" section on http://www.flightemissionmap.org/
 
 
 ![Screenshot](misc/publish_to_web_screenshot.png)
