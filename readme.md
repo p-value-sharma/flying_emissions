@@ -1,4 +1,4 @@
-Project objective: Help me keep track of carbon emissions due to work-related flying. Method for estimating emissions comes from http://www.flightemissionmap.org/. I'm putting my code and tools online so that you too can keep track of your flight emissions!
+Project objective: Help me keep track of carbon emissions due to work-related flying. Method for estimating emissions comes from http://www.flightemissionmap.org/. I'm putting the code and tools online so that you too can keep track of your flight emissions!
 
 This project includes: 
 1. Flight tracking data entry tool - view only link:
