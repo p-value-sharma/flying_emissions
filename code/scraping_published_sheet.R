@@ -2,6 +2,7 @@
 library(rvest)
 library(dplyr)
 library(geosphere)
+library(lubridate)
 
 
 # webscraping google sheet #####
@@ -23,26 +24,51 @@ flight_log_cleaned <- flight_log %>%
   mutate(trip_no = as.integer(trip_no),
          depart_date = as.Date(depart_date, format = '%d/%m/%Y'),
          roundtrip_return_date = as.Date(roundtrip_return_date, format = '%d/%m/%Y')) %>% 
-  filter(!is.na(trip_no)) 
+  filter(!is.na(trip_no)) %>% 
+  select(-trip_no)
 
 write.csv(flight_log_cleaned, here::here('intermediate_data','flight_log_cleaned.csv'))
 
 
 # creating list of airport lat long ####
-latlong_vector <- mapply(function(y,z) list(c(y,z)), 
-                         airports_only$latitude_deg, airports_only$longitude_deg)
-
-
-names(latlong_vector) <- airports_only$iata_code
+longlat_vector <- mapply(function(y,z) list(c(y,z)), 
+                         airports_only$longitude_deg, airports_only$latitude_deg)
+names(longlat_vector) <- airports_only$iata_code
 # calculate Great Circle Distance between airports in flight_log_cleaned ####
 
-geosphere::distHaversine()
+# could have used the distVincentyEllipsoid function, but distHaversine is faster and the big uncertainty 
+# comes from the tCO2 per passenger per km, so I'm not going to worry about fake certainty
+flight_log_cleaned$great_circle_dist_km <- mapply(function(x,y) 
+  geosphere::distHaversine(
+    p1 = longlat_vector[[x]],
+    p2 = longlat_vector[[y]])/1000,
+       flight_log_cleaned$departure_airport, flight_log_cleaned$arrival_airport, USE.NAMES = F)
 
 
-# calculate emissions ####
+
+# calculate flight emissions #####
+
+one_way_flights <- flight_log_cleaned %>% 
+  select(-c('roundtrip', 'roundtrip_return_date'))
+         
+return_flights <- flight_log_cleaned %>% 
+  filter(roundtrip == 'Yes') %>% 
+  mutate(depart_date = roundtrip_return_date) %>% 
+  select(arrival_airport, departure_airport, depart_date, class, great_circle_dist_km) %>% 
+  rename(departure_airport = arrival_airport,
+         arrival_airport = departure_airport)
 
 
-# (170 g CO2_eq per passenger per km)
-# Reference: https://research.chalmers.se/publication/508693/file/508693_Fulltext.pdf
+data_for_viz <- bind_rows(one_way_flights, return_flights) %>% 
+  arrange(depart_date) %>% 
+  # Reference: https://research.chalmers.se/publication/508693/file/508693_Fulltext.pdf
+  mutate(tCO2_eq_kg = 170*great_circle_dist_km/1000,
+         month = format(depart_date, '%m'),
+         year = format(depart_date, '%Y'),
+         yearmon = as.Date(paste('01',month, year, sep = '/'), format = '%d/%m/%Y'),
+         quarter = quarter(depart_date, with_year = T)) %>% 
+  select(-c('month', 'year'))
+
+
 
 
