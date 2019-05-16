@@ -9,7 +9,7 @@ https://docs.google.com/spreadsheets/d/10_DppOhXNVn38csZiNLH7TJhdyPmqpMO6u3d5zI7
    + I've choosen Google Sheets because it's free and has a mobile app for [iOS](https://itunes.apple.com/app/apple-store/id842849113?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets) devices (so you can enter data when you're out and about)
 
 
-2. Ability to create quarterly and yearly visualizations that are dynamic (Shiny web app) and static (png).
+2. Ability to create quarterly and yearly visualizations that are dynamic (Shiny web app) and static (png). Visualizations contain: 
 - the number of flights
 - the estimated amount of emissions in tonne of CO2 equivalent emissions (tCO2e)
   + for caveats of the method, please read the "How are emissions computed?" section on http://www.flightemissionmap.org/
