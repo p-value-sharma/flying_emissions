@@ -31,6 +31,8 @@ write.csv(flight_log_cleaned, here::here('intermediate_data','flight_log_cleaned
 
 
 # creating list of airport lat long ####
+airports_only <- read.csv(here::here('intermediate_data', 'airports_only.csv'))
+
 longlat_vector <- mapply(function(y,z) list(c(y,z)), 
                          airports_only$longitude_deg, airports_only$latitude_deg)
 names(longlat_vector) <- airports_only$iata_code
@@ -70,5 +72,6 @@ data_for_viz <- bind_rows(one_way_flights, return_flights) %>%
   select(-c('month', 'year'))
 
 
+write.csv(data_for_viz, here::here('intermediate_data','data_for_viz.csv'))
 
 
