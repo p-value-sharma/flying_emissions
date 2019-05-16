@@ -1,0 +1,4 @@
+"","trip_no","departure_airport","arrival_airport","depart_date","roundtrip","roundtrip_return_date","class","latitude_deg","longitude_deg"
+"1",1,"ACC","BKK",2040-06-10,"No",NA,"Economy",5.60518980026245,-0.166786000132561
+"2",2,"BKK","DSM",2040-06-15,"No",NA,"Economy",13.6810998916626,100.747001647949
+"3",3,"DSM","BWI",2040-06-21,"Yes",2040-06-27,"Economy",41.5340003967285,-93.6631011962891
