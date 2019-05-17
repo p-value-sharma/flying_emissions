@@ -1,3 +1,5 @@
 "","trip_no","departure_airport","arrival_airport","depart_date","roundtrip","roundtrip_return_date","class","opt_personal","opt_flight_no"
-"1",1,"KEF","DPS",2040-06-10,"Yes",2040-06-15,"Economy","",""
-"2",2,"KEF","LAX",2040-06-20,"Yes",2040-07-02,"Economy","",""
+"1",1,"KEF","DPS",2040-06-10,"Yes",2040-06-15,"Economy","No",""
+"2",2,"KEF","LAX",2040-06-20,"No",NA,"Economy","No",""
+"3",3,"LAX","SVO",2040-06-27,"Yes",2040-07-02,"Economy","No",""
+"4",4,"LAX","ZAG",2040-07-21,"Yes",2040-08-02,"Economy","Yes",""
